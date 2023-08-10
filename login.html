@@ -7,8 +7,9 @@
   <title>my login</title>
   <link href="login.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@300&display=swap"
+    rel="stylesheet">
 </head>
 
 </head>
@@ -16,16 +17,16 @@
 <body>
   <header id="header">
     <nav class="container">
-     <div class="right">
-      <h1 class="logo"><a href="./index.html">CYBER WARRIORS</a></h1>
-     </div>
+      <div class="right">
+        <h1 class="logo"><a href="./index.html">CYBER WARRIORS</a></h1>
+      </div>
       <div class="left">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Go to Test</a></li>
-            <li><a href="./login.html">Login</a></li>
-           
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Go to Test</a></li>
+          <li><a href="./login.html">Login</a></li>
+
         </ul>
 
       </div>
@@ -33,46 +34,91 @@
         <li><button class="btn"><a href="/register.html">Register</a></button></li>
       </div> -->
     </nav>
-</header>
-<section id="login">
-<center>
-  <form autocomplete="off" >       
-     <div>
-       <h1 class="heading">Log in</h1>
-     </div><br><br>
-     <div>
-       <button class="google">
-         <img src="goog.png" class="img"  <a href="https://www.google.com/"> </a>
-       </button>
-       <button class="facebook">
-         <img src="FACEEE.png" class="img">
-       </button><br><br>
-     </div><br>
-     <div>
-       <lable>Username</lable><br>
-       <input type="text" name="username" placeholder="Email/Username"><br>
-     </div><br>
-     <div>
-       <lable>Password <a href="#" class="forgot" >forgot?</a>  </lable><br>
-       <input type="password" name="password" placeholder="Enter your Password"><br>
+  </header>
+  <section id="login">
+    <center>
+      <form autocomplete="off">
+        <div>
+          <h1 class="heading">Log in</h1>
+        </div><br><br>
+        <div>
+          <button class="google" id="login">
+            Continue with Google
+          </button>
 
-     </div><br><br>
-     <div>
-       <input type="submit" name="submit" value="Log In">
-     </div>
-     <span class="span">
-       not have account? <a href="./register.html">Register now</a> 
-     </span><br><br>
-  </form>
-</center>
-</section>
+        </div><br>
+        <div>
+          <lable>Username</lable><br>
+          <input type="text" name="username" placeholder="Email"><br>
+        </div><br>
+        <div>
+          <lable>Password <a href="#" class="forgot">forgot?</a> </lable><br>
+          <input type="password" name="password" placeholder="Enter your Password"><br>
 
-
-
-
-  
+        </div><br><br>
+        <div>
+          <input type="submit" name="submit" value="Log In">
+        </div>
+        <span class="span">
+          not have account? <a href="./register.html">Register now</a>
+        </span><br><br>
+      </form>
+    </center>
+  </section>
   <script src="script.js"></script>
-  
+
 </body>
+<!-- login with google firebase -->
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import {  getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCO7dklgG7u5FxHqGFVFdmIWgnNsltrfIk",
+    authDomain: "cyberwarrior-bb4d7.firebaseapp.com",
+    projectId: "cyberwarrior-bb4d7",
+    storageBucket: "cyberwarrior-bb4d7.appspot.com",
+    messagingSenderId: "473155416723",
+    appId: "1:473155416723:web:8eee9df53bfe23f0fe1366"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(auth);
+  const provider = new GoogleAuthProvider();
+
+  login.addEventListener('click' ,(e) =>{
+    signInWithRedirect(auth, provider);
+    
+    getRedirectResult(auth)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access Google APIs.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+
+  })
+
+</script>
+
 
 </html>

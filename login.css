@@ -125,25 +125,18 @@ nav ul li a{
   
   
   
-  
-  .facebook{
-    background: #fff;
-    border: 1px solid #ccc;
-    float:left;
-    margin-left:45px ;
-    border-radius:5px ;
-    width:110px;
-    
-  }
+
   
   
   .google{
     background: #fff;
     border: 1px solid #ccc;
-    float: left;
-    margin-left: 63px;
+    margin: 10px;
     border-radius:5px ;
-    width:110px;
+    width:310px;
+    padding: 15px;
+    font-size: 15px;
+
   }
   img{
     width: 35px;
