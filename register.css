@@ -48,6 +48,9 @@ body{
     color:rgb(41, 105, 161);
     text-decoration: none;
   }
+  nav ul li a:hover{
+    color: #f45106;
+}
   .logo a{
     color: #fff;
     text-decoration: none;

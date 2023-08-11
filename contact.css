@@ -1,6 +1,185 @@
-.main{
-    background-color: aqua;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(221, 240, 243);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+.LOGOOFCYBER{
+  width: 60px;
+  height: 60px;
+}
+
+nav{
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(12, 224, 239); 
+    width: 100%;
+    
+  }
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
 }
 .right{
-    background-color: brown;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-shadow: 2px 4px 4px gray;
+    height: fit-content;
+    color: #fff;
 }
+.left{
+    font-size: 1.1rem;
+    
+  
+}
+
+
+.logo a{
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a{
+    color:rgb(15, 79, 135);
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #f45106;
+}
+.btomj li {
+    list-style: none;
+}
+.btomj li a{
+    text-decoration: none;
+    color:rgb(12, 88, 155) ;
+    font-size: 20px;
+    
+}
+
+.btn{
+    display: inline-block;
+    background:rgb(210, 241, 245);
+    width:fit-content;
+    border:1px solid #f7f5f5;
+    padding:12px 50px;
+    border-radius:6px;
+    transition:background 0.5s;
+     
+}
+.btn:hover{
+  background:rgb(138, 232, 232);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color:#1bcfdc;
+    padding: 10px;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  h2, p {
+    color: rgb(35, 3, 63);
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 50px;
+  }
+  
+  p {
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 1rem;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  .column img {
+    width: 100%;
+    border-radius: 10%;
+  }
+  
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  input, textarea {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    outline-color: rgb(123, 50, 192);
+    resize: vertical;
+  }
+  
+  input {
+    height: 40px;
+    padding: 0px 10px;
+  }
+  
+  textarea {
+    height: 170px;
+    padding: 17px;
+  }
+  
+  #btn {
+    display: inline-block;
+    width: 180px;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    color: #0db3e0;
+    background-image: linear-gradient(to right, #aa076b);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: ease 0.2s;
+  }
+  
+  #btn:hover {
+    background-image: linear-gradient(to right, #61045f, #aa076b);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column, #btn {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  

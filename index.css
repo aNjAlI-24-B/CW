@@ -5,8 +5,9 @@
 }
 
 body {
-    background-color: rgb(221, 240, 243);
+    /* background-color: rgb(13, 209, 240); */
     color: white;
+    background-color: rgb(221, 240, 243);
     font-family: 'Poppins', sans-serif;
 
 }
@@ -20,7 +21,7 @@ nav{
     justify-content:  space-around;
     align-items: center;
     height: 80px;
-    background-color: rgb(105, 220, 228); 
+    background-color: rgb(12, 224, 239); 
     width: 100%;
     
   }
@@ -55,6 +56,9 @@ nav ul li a{
     color:rgb(41, 105, 161);
     text-decoration: none;
 }
+nav ul li a:hover{
+  color: #f45106;
+}
 .btomj li {
     list-style: none;
 }
@@ -78,6 +82,9 @@ nav ul li a{
 .btn:hover{
   background:rgb(138, 232, 232);
 }
+.main1{
+  background-color: rgb(221, 240, 243);
+}
 
 /* main section css */
 .firstSection {
@@ -85,6 +92,7 @@ nav ul li a{
     justify-content: space-around;
     margin: 60px 20px;
     align-items: center;
+    background-color: rgb(221, 240, 243);
   }
 
   .firstSection > div {
@@ -138,6 +146,7 @@ nav ul li a{
     margin-top: 70px;
     font-size: 2.5rem;
     color: rgb(27, 92, 138);
+    background-color: rgb(221, 240, 243);
   }
    li{
     color: #4d778a;
