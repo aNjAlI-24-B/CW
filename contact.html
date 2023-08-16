@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactus</title>
     <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </head>
 <body>
-
+    
     <header id="header">
         <nav class="container">
           <div class="right">
@@ -41,35 +43,49 @@
                 <img src="contact.jpeg">
             </div>
             <div class="column">
-                <form action="" method="POST" onsubmit="sendEmail(); reset(); return false;">
+                <!-- <form action="" method="POST" onsubmit="sendEmail(); reset(); return false;">
                     <input type="text" id="name" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="tel" name="phone" placeholder="Mobile No" required>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                     <button id="btn" type="submit">Submit</button>
-                </form>
+                </form> -->
+                <script src="https://sheetdb.io/s/f/ejo0k47y4g28u.js">
+                    
+                </script>
             </div>
         </div>
     </div>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        function sendEmail(){
-
-            Email.send({
-       secureTokek:"56bc2b1b-7d69-42a4-ba75-091609b6193f",         
-    // Host : "smtp.gmail.com",
-    // Username : "2021bcs027@sggs.ac.in",
-    // Password : "2021BCS027",
-    To : 'sanikanarwade325@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact Form Enquiry",
-    Body : "Name" + document.getElementById("name").value + "<br> Email:"+ document.getElementById("email").value
-    + "<br> mobile No:"+ document.getElementById("mobile_no").value
-    + "<br> Your Message:"+ document.getElementById("your_messgae").value
-}).then(
-  message => alert("Message sent Succesfully")
-);
+        // Initialize Email.js with your user ID
+        emailjs.init("user_your_user_id");
+    
+        function sendEmail() {
+            // Create the email parameters
+            var params = {
+                secureTokek: "56bc2b1b-7d69-42a4-ba75-091609b6193f",
+                To: 'sanikanarwade325@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form Enquiry",
+                Body: "Name: " + document.getElementById("name").value +
+                      "<br>Email: " + document.getElementById("email").value +
+                      "<br>Mobile No: " + document.getElementById("mobile_no").value +
+                      "<br>Your Message: " + document.getElementById("your_message").value
+            };
+    
+            // Send the email
+            emailjs.send("your_service_id", "your_template_id", params)
+                .then(function(response) {
+                    console.log("Email sent successfully:", response);
+                    alert("Message sent successfully");
+                })
+                .catch(function(error) {
+                    console.error("Email sending failed:", error);
+                    alert("Message sending failed");
+                });
         }
     </script>
+    
 </body>
 </html>

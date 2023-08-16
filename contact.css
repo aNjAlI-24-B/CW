@@ -110,12 +110,14 @@ nav ul li a:hover{
   
   h2 {
     font-size: 50px;
+    margin: 15px;
   }
   
   p {
     letter-spacing: 1px;
     line-height: 20px;
     font-size: 1rem;
+    margin: 10px;
   }
   
   .column {
@@ -169,8 +171,12 @@ nav ul li a:hover{
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    transition: ease 0.2s;
+    /* transition: ease 0.2s; */
   }
+
+  
+  
+  
   
   #btn:hover {
     background-image: linear-gradient(to right, #61045f, #aa076b);
@@ -182,4 +188,5 @@ nav ul li a:hover{
       margin-top: 0;
     }
   }
+  
   

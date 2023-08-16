@@ -81,7 +81,7 @@ nav ul li a:hover{
 
 /* ---------------------------------form------------------------- */
   form{
-    top:50%;
+    top:10%;
     left: 50%;
     transform:translate(-50% -50%);
     width:390px ;
@@ -89,7 +89,7 @@ nav ul li a:hover{
     padding: 20px;
     position:flex;
     background-color: #ffffff;
-    margin: 200px;
+    margin: 100px;
     border-radius: 5px;
   
   }
@@ -160,6 +160,6 @@ nav ul li a:hover{
   }
   .heading{
     color: #2bd7ee;
-    font-size: 30px;
+    font-size: 40px;
    font-weight:bold;
   }
