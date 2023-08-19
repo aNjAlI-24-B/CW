@@ -9,7 +9,7 @@
 
 .container {
     height: 100%;
-    width: 100%;
+    width: 50%;
     /* background: #ebeef1; */
     background-color: rgb(221, 240, 243);
     display: flex;
