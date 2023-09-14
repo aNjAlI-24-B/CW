@@ -139,3 +139,26 @@ span a{
   color:  #2bd7ee;
   font-size:32px;
 }
+ @media screen and ( min-width: 200px) and (  max-width: 650px) {
+    nav {
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+     width: 440px;
+    
+}
+nav ul {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(105, 220, 228);
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+#form{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+}
