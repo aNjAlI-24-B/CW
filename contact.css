@@ -182,32 +182,4 @@ nav ul li a:hover{
     background-image: linear-gradient(to right, #61045f, #aa076b);
   }
   
-  @media screen and ( min-width: 200px) and (  max-width: 650px) {
-    nav {
-    flex-direction: column;
-    align-items: center;
-    height:auto;
-     width: 440px;
-    }
-  nav ul {
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-decoration: underline;
-   }
-
-  nav ul li {
-  margin: 10px 0;
-  }
-  }
-  @media screen and ( min-width:300px)  {
-   input{
-     display: block;
-     width:50px;
-   }
-   .column {
-    display: block;
-    
-  }
-}
-  
+ 
