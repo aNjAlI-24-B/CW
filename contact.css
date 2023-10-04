@@ -125,14 +125,7 @@ nav ul li a:hover{
   background:rgb(138, 232, 232);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .container {
+.container {
     border-radius: 5px;
     background-color:#1bcfdc;
     padding: 10px;
@@ -242,5 +235,29 @@ nav ul li {
   margin: 10px 0;
    margin-bottom: 20px;
 }
+
+h2{
+  font-size:22px;
+  margin-left:0px;
+  margin-right:125px;
+}
+
+p{
+  font-size:12px;
+  margin-right:130px;
+}
+h1{
+  margin-right:190px;
+  font-size:20px;
+}
+
+button{
+  margin-right:190px;
+}
+.dropdown{
+  margin-right:123px;
+}
+}
+ 
   
  
